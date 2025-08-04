@@ -6,7 +6,6 @@ import { Carousel } from './carousel/carousel';
 import { ContactSection } from './contact-section/contact-section';
 import { AboutMe } from './about-me/about-me';
 
-
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Navbar, Carousel, ContactSection, AboutMe],

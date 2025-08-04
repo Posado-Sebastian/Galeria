@@ -1,0 +1,15 @@
+.carousel-custom {
+  width: 280px !important;
+  max-width: 280px !important;
+  margin: 1.5rem auto !important;
+}
+
+.carousel-custom .c-carousel-inner {
+  width: 100% !important;
+}
+
+.carousel-custom img {
+  max-height: 120px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}

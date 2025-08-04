@@ -17,7 +17,6 @@ import {
   imports: [
     NavbarComponent,
     ContainerComponent,
-    NavbarBrandDirective,
     NavbarTogglerDirective,
     CollapseDirective,
     NavbarNavComponent,
