@@ -1,22 +1,19 @@
-<c-navbar colorScheme="light" expand="lg" class="bg-light">
+<c-navbar colorScheme="dark" expand="lg" class="bg-dark">
   <c-container fluid>
     <a cNavbarBrand href="https://coreui.io/angular/" target="_blank">
       Navbar
     </a>
     <button [cNavbarToggler]="collapseRef"></button>
     <div #collapseRef="cCollapse" navbar cCollapse>
-      <c-navbar-nav class="me-auto mb-2 mb-lg-0">
+      <c-navbar-nav class="mx-auto mb-2 mb-lg-0 justify-content-center gap-3">
         <c-nav-item>
-          <a cNavLink [active]>Home</a>
+          <a cNavLink [active]>Inicio</a>
         </c-nav-item>
         <c-nav-item>
-          <a cNavLink>Features</a>
+          <a cNavLink>Galería</a>
         </c-nav-item>
         <c-nav-item>
-          <a cNavLink>Pricing</a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink disabled>Disabled</a>
+          <a cNavLink>Contactos</a>
         </c-nav-item>
       </c-navbar-nav>
     </div>
