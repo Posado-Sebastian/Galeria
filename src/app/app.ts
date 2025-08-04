@@ -3,11 +3,12 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
 import { Carousel } from './carousel/carousel';
+import { ContactSection } from './contact-section/contact-section';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Carousel],
+  imports: [RouterOutlet, Navbar, Carousel, ContactSection],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
