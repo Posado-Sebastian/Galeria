@@ -1,18 +1,9 @@
-<c-navbar colorScheme="dark" expand="lg" class="bg-dark">
-  <c-container fluid>
-    <button [cNavbarToggler]="collapseRef"></button>
-    <div #collapseRef="cCollapse" navbar cCollapse>
-      <c-navbar-nav class="mx-auto mb-2 mb-lg-0 justify-content-center gap-3">
-        <c-nav-item>
-          <a cNavLink href="#top" [active]>Inicio</a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink href="#carousel">Galería</a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink href="#contact">Contactos</a>
-        </c-nav-item>
-      </c-navbar-nav>
-    </div>
-  </c-container>
-</c-navbar>
+<nav class="navbar">
+  <div class="navbar-container">
+    <ul class="navbar-links">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#carousel">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
