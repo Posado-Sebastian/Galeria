@@ -6,11 +6,12 @@ import { ContactSection } from './contact-section/contact-section';
 import { AboutMe } from './about-me/about-me';
 import { Carousel } from './carousel/carousel';
 
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Navbar, ContactSection, AboutMe, Carousel],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('Proyecto');

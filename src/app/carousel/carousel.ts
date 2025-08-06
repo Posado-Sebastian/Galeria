@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.html',
-  styleUrl: './carousel.css',
+  styleUrls: ['./carousel.css'],
   standalone: true
 })
 export class Carousel {
