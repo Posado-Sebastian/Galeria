@@ -1,21 +1,9 @@
-<c-carousel class="carousel-custom">
-  <c-carousel-indicators />
-  <c-carousel-inner>
-    @for (slide of slides; track slide.src) {
-      <c-carousel-item>
-        <img
-          alt="{{slide.title}}"
-          class="d-block w-100"
-          loading="lazy"
-          src="{{slide.src}}"
-        />
-        <c-carousel-caption class="d-none d-md-block">
-          <h3>{{ slide.title }}</h3>
-          <p>{{ slide.subtitle }}</p>
-        </c-carousel-caption>
-      </c-carousel-item>
-    }
-  </c-carousel-inner>
-  <c-carousel-control [routerLink] caption="Previous" direction="prev" />
-  <c-carousel-control [routerLink] caption="Next" direction="next" />
-</c-carousel>
+<div class="carousel">
+  <button class="carousel-btn" (click)="prev()" [disabled]="transitioning">
+    <img src="assets/img/left.svg" alt="Anterior" class="carousel-arrow" />
+  </button>
+  <img [src]="images[current]" alt="slide" class="carousel-img" [class.fade]="fade" />
+  <button class="carousel-btn" (click)="next()" [disabled]="transitioning">
+    <img src="assets/img/right.svg" alt="Siguiente" class="carousel-arrow" />
+  </button>
+</div>
