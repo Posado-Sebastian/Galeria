@@ -1,0 +1,82 @@
+:root {
+  --gold: #d4a017;
+}
+
+.titles {
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+/* Título principal con subrayado centrado */
+.main-title {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding-bottom: 0.3rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-weight: normal;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  width: 700px;
+  max-width: 90%;
+  height: 4px;
+  background: #d4a017;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.subtitle {
+  margin-top: 1.6rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+  .main-title::after {
+    width: 90vw;
+    max-width: 98%;
+    height: 3px;
+  }
+}
+
+/* Divider visual entre secciones principales */
+.section-divider {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0.1rem auto 3rem auto;
+  border: none;
+  border-top: 2.5px solid rgba(60,60,60,0.28);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  height: 0;
+}
+
+/* Botón Ver Más */
+.btn-more {
+  margin-top: 0.1rem;
+  margin-bottom: 2.5rem;
+  background-color: #d4a017;
+  border: none;
+  padding: 18px 38px;
+  color: rgb(255, 255, 255);
+  border-radius: 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.btn-more:hover {
+  background-color: #b88a12;
+}
