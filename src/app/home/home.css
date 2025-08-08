@@ -1,3 +1,20 @@
+/* Ajuste específico para el título de la bio usando main-title */
+.bio-section .main-title {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 1.5rem auto;
+  padding-bottom: 0.3rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+.bio-section.titles {
+  text-align: center;
+}
 :root {
   --gold: #d4a017;
 }
@@ -14,7 +31,7 @@
   margin: 0;
   padding-bottom: 0.3rem;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
-  letter-spacing: 0.5rem;
+  letter-spacing: 1rem;
   text-transform: uppercase;
   font-family: 'Bebas Neue', Arial, sans-serif;
   font-weight: normal;
@@ -26,8 +43,8 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 15px;
-  width: 700px;
-  max-width: 90%;
+  width: 90%;
+  max-width: 900px;
   height: 4px;
   background: #d4a017;
   border-radius: 4px;
