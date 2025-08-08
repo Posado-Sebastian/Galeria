@@ -5,11 +5,12 @@ import { Navbar } from './navbar/navbar';
 import { ContactSection } from './contact-section/contact-section';
 import { AboutMe } from './about-me/about-me';
 import { Carousel } from './carousel/carousel';
+import { Banner } from './banner/banner';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, ContactSection, AboutMe, Carousel],
+  imports: [RouterOutlet, Navbar, ContactSection, AboutMe, Carousel, Banner],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
