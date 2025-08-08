@@ -2,15 +2,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
-import { ContactSection } from './contact-section/contact-section';
-import { AboutMe } from './about-me/about-me';
-import { Carousel } from './carousel/carousel';
-import { Banner } from './banner/banner';
-
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, ContactSection, AboutMe, Carousel, Banner],
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
