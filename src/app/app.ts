@@ -14,5 +14,5 @@ import { Carousel } from './carousel/carousel';
   styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('Proyecto');
+  protected readonly title = signal('Página');
 }

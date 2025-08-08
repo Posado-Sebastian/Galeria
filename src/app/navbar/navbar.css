@@ -1,45 +1,37 @@
-.navbar {
-  width: 100%;
-  background: #222;
-  color: #fff;
-  padding: 1.35rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-}
-
-.navbar-container {
-  max-width: 1320px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2.2rem;
-}
-
-.navbar-logo {
-  font-size: 1.7rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 2.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li a {
-  color: #fff;
+.navbar-brand-custom:focus {
+  color: #b0b0b0 !important;
   text-decoration: none;
+}
+.navbar {
+  background-color: #072c3d !important; /* azul oscuro como en la imagen */
+  min-height: 70px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.navbar-brand {
   font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.2s;
 }
 
-.navbar-links li a:hover {
-  color: #cac7c7;
+.nav-link {
+  font-size: 1rem;
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: #b0b0b0 !important; /* efecto hover */
+}
+
+.dropdown-menu {
+  background-color: #072c3d;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: #09455e;
 }

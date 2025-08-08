@@ -1,9 +1,10 @@
 .contact-section {
   width: 100%;
-  background: #222;
+  background: #072c3d;
   color: #fff;
   padding: 2rem 0;
   text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 .contact-section h2 {
   margin-bottom: 1.5rem;
@@ -25,11 +26,11 @@
   transition: color 0.2s;
 }
 .contact-link.instagram:hover {
-  color: #E1306C;
+  color: #b0b0b0;
 }
 .contact-link.gmail:hover {
-  color: #EA4335;
+  color: #b0b0b0;
 }
 .contact-link.phone:hover {
-  color: #ffd600;
+  color: #b0b0b0;
 }
