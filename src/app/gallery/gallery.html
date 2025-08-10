@@ -1,1 +1,39 @@
-<p>gallery works!</p>
+<main class="main">
+    <section class="titles">
+        <h1 class="main-title">PINTURAS</h1>
+        <h2 class="subtitle">Iconos</h2>
+</section>
+            <div class="galeria-iconos">
+                <!-- Desktop: todas las imágenes -->
+                <ng-container *ngIf="!isMobile; else mobileCarousel">
+                    <img *ngFor="let img of images; let i = index"
+                                [src]="img.src"
+                                [alt]="img.title"
+                                (click)="openModal(img.src)"
+                                [ngClass]="{'middle-img': i === 1}">
+                </ng-container>
+                            <!-- Mobile: solo una imagen visible, rotando automáticamente -->
+                            <ng-template #mobileCarousel>
+                                <img [src]="images[currentIndex].src"
+                                     [alt]="images[currentIndex].title"
+                                     (click)="openModal(images[currentIndex].src)"
+                                     [@fadeInOut]
+                                     [attr.key]="currentIndex">
+                            </ng-template>
+            </div>
+
+            <div class="modal-overlay" *ngIf="modalOpen" (click)="closeModal()">
+                <div class="modal-img-container modal-flex" (click)="$event.stopPropagation()">
+                    <img [src]="modalImg" alt="Imagen ampliada">
+                    <div class="modal-info">
+                        <h2>{{modalTitle}}</h2>
+                        <p>{{modalDesc}}</p>
+                    </div>
+                    <button class="close-modal" (click)="closeModal()">&times;</button>
+                </div>
+            </div>
+    <div class="section-divider"></div>
+    <section class="titles">
+        <h2 class="subtitle">Paisajes y Actitudes</h2>
+    </section>
+</main>
