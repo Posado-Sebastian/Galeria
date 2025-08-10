@@ -1,3 +1,12 @@
+.brand {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0 8px;
+  line-height: 1.2;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -81,38 +90,74 @@
   display: block;
 }
 
-
-
-.navbar {
-  position: relative;
-}
-
-.navbar-center-absolute {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #03283b;
-  padding: 24px 20px;
-  min-height: 72px;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-}
-
 .navbar *, .navbar a, .navbar .dropdown-content a {
   font-family: 'Poppins', sans-serif !important;
 }
 
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
 
+/* Modo mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-center {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #03283b;
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    padding: 18px 0 14px 0;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    margin: 0;
+    left: 0;
+    position: absolute;
+    top: 60px;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-16px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .navbar-center.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar-center a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+/* Por defecto ocultamos en mobile */
+.mobile-only {
+  display: none;
+}
 
 
 

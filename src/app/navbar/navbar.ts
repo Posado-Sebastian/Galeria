@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.html',
@@ -9,5 +10,9 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule]
 })
 export class Navbar {
+  menuOpen = false;
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }

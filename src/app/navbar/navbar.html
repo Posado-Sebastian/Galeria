@@ -1,12 +1,20 @@
-
 <nav class="navbar">
   <div class="navbar-left">
     <span class="brand">Ale Suarez Rupar</span>
   </div>
-  <div class="navbar-center navbar-center-absolute">
+
+  <!-- Botón hamburguesa -->
+  <div class="menu-toggle" (click)="toggleMenu()">
+    ☰
+  </div>
+
+  <div
+    class="navbar-center"
+    [ngClass]="{ active: menuOpen }"
+  >
     <a href="">Inicio</a>
     <div class="dropdown">
-      <a href="#">Galería ▼</a>
+      <a href="#">Galería</a>
       <div class="dropdown-content">
         <a routerLink="/galeria">Iconos</a>
         <a routerLink="/galeria">Paisajes y Actitudes</a>
@@ -14,10 +22,10 @@
       </div>
     </div>
     <a href="#bio">Perfil</a>
+    <a href="#contacto" class="mobile-only">Contacto</a>
   </div>
-  <div class="navbar-right">
+
+  <div class="navbar-right desktop-only">
     <a href="#contacto">Contacto</a>
   </div>
 </nav>
-
-
