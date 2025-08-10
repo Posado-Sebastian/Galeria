@@ -1,4 +1,3 @@
-/* Ajuste específico para el título de la bio usando main-title */
 .bio-section .main-title {
   display: inline-block;
   position: relative;
@@ -62,9 +61,7 @@
 
 @media (max-width: 600px) {
   .main-title::after {
-    width: 90vw;
-    max-width: 98%;
-    height: 3px;
+    display: none;
   }
 }
 
