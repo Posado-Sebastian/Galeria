@@ -1,44 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
-  <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap" style="min-height:64px;">
-    <a class="navbar-brand fw-bold" href="">Ale Suarez Rupar</a>
 
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse flex-grow-1 justify-content-center" id="navbarNav">
-      <ul class="navbar-nav mx-auto me-lg-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="">Inicio</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="galeriaDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-          >
-            Galería
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Iconos</a></li>
-            <li><a class="dropdown-item" href="#">Paisajes y Actitudes</a></li>
-            <li><a class="dropdown-item" href="#">El Viejo Muelle</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#bio">Perfil</a>
-        </li>
-      </ul>
-      <div class="d-none d-lg-block ms-lg-3">
-        <a class="nav-link text-white" href="#contacto">Contacto</a>
+<nav class="navbar">
+  <div class="navbar-left">
+    <span class="brand">Ale Suarez Rupar</span>
+  </div>
+  <div class="navbar-center navbar-center-absolute">
+    <a href="">Inicio</a>
+    <div class="dropdown">
+      <a href="#">Galería ▼</a>
+      <div class="dropdown-content">
+        <a routerLink="/galeria">Iconos</a>
+        <a routerLink="/galeria">Paisajes y Actitudes</a>
+        <a routerLink="/galeria">El Viejo Muelle</a>
       </div>
     </div>
+    <a href="#bio">Perfil</a>
+  </div>
+  <div class="navbar-right">
+    <a href="#contacto">Contacto</a>
   </div>
 </nav>
+
+

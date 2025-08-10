@@ -1,37 +1,121 @@
-.navbar-brand-custom:focus {
-  color: #b0b0b0 !important;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #03283b;
+  padding: 24px 20px;
+  min-height: 72px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.navbar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar a {
   text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar-center a:hover,
+.navbar-right a:hover {
+  color: #bbbbbb;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #03283b;
+  min-width: 150px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #021b28;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.navbar {
+  position: relative;
+}
+
+.navbar-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 .navbar {
-  background-color: #072c3d !important; /* azul oscuro como en la imagen */
-  min-height: 70px;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  font-family: 'Poppins', Arial, sans-serif;
-}
-
-.navbar-brand {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.nav-link {
-  font-size: 1rem;
-  color: #fff !important;
-}
-
-.nav-link:hover {
-  color: #b0b0b0 !important; /* efecto hover */
-}
-
-.dropdown-menu {
-  background-color: #072c3d;
-}
-
-.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #03283b;
+  padding: 24px 20px;
+  min-height: 72px;
+  font-family: 'Poppins', sans-serif;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
 }
 
-.dropdown-item:hover {
-  background-color: #09455e;
+.navbar *, .navbar a, .navbar .dropdown-content a {
+  font-family: 'Poppins', sans-serif !important;
 }
+
+
+
+
+
+
+
+
