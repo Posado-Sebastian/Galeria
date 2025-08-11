@@ -1,7 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
 import { IconosCarousel } from '../iconos-carousel/iconos-carousel';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-gallery',
@@ -26,21 +28,7 @@ export class Gallery implements OnInit, OnDestroy {
   modalTitle = '';
   modalDesc = '';
 
-  paisajes = [
-    { src: 'assets/img/1.jpg', alt: 'Paisaje 1' },
-    { src: 'assets/img/2.jpg', alt: 'Paisaje 2' },
-    { src: 'assets/img/3.jpg', alt: 'Paisaje 3' },
-    { src: 'assets/img/4.jpg', alt: 'Paisaje 4' },
-    { src: 'assets/img/5.jpg', alt: 'Paisaje 5' },
-    { src: 'assets/img/6.jpg', alt: 'Paisaje 6' },
-    { src: 'assets/img/7.jpg', alt: 'Paisaje 7' },
-    { src: 'assets/img/8.jpg', alt: 'Paisaje 8' },
-    { src: 'assets/img/9.jpg', alt: 'Paisaje 9' },
-    { src: 'assets/img/10.jpg', alt: 'Paisaje 10' },
-    { src: 'assets/img/11.jpg', alt: 'Paisaje 11' },
-    { src: 'assets/img/12.jpg', alt: 'Paisaje 12' },
-    { src: 'assets/img/13.jpg', alt: 'Paisaje 13' }
-  ];
+  paisajes: any[] = [];
 
   imagenActiva = 0;
 
@@ -55,23 +43,7 @@ export class Gallery implements OnInit, OnDestroy {
     this.modalOpen = true;
   }
 
-  images = [
-    {
-      src: 'assets/img/Spinetta b.jpg',
-      title: 'Spinetta',
-      desc: 'Luis Alberto Spinetta, ícono del rock argentino.'
-    },
-    {
-      src: 'assets/img/Charly a.jpg',
-      title: 'Charly García',
-      desc: 'Charly García, leyenda viva de la música nacional.'
-    },
-    {
-      src: 'assets/img/JL A.jpg',
-      title: 'Juan Luis',
-      desc: 'Obra inspirada en la actitud y paisaje de Juan Luis.'
-    }
-  ];
+  images: any[] = [];
 
 
 
@@ -84,7 +56,16 @@ export class Gallery implements OnInit, OnDestroy {
     this.modalOpen = true;
   }
 
-  ngOnInit() {}
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get<any[]>('assets/data/paisajes.json').subscribe(data => {
+      this.paisajes = data;
+    });
+    this.http.get<any[]>('assets/data/iconos.json').subscribe(data => {
+      this.images = data;
+    });
+  }
   ngOnDestroy() {}
 
   openModal(img: string) {
