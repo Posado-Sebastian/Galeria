@@ -1,9 +1,9 @@
 <main class="main">
-    <section class="titles">
+    <section class="titles" id="iconos">
         <h1 class="main-title">PINTURAS</h1>
         <h2 class="subtitle">Iconos</h2>
     </section>
-            <iconos-carousel [images]="images" (imageClick)="onIconoClick($event)"></iconos-carousel>
+    <iconos-carousel [images]="images" (imageClick)="onIconoClick($event)"></iconos-carousel>
     <div class="modal-overlay" *ngIf="modalOpen" (click)="closeModal()">
         <div class="modal-img-container modal-flex" (click)="$event.stopPropagation()">
             <img [src]="modalImg" alt="Imagen ampliada">
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="section-divider"></div>
-    <section class="titles">
+    <section class="titles" id="paisajes">
         <h2 class="subtitle">Paisajes y Actitudes</h2>
     </section>
 </main>
