@@ -104,9 +104,24 @@
   display: flex;
   align-items: center;
   padding-top: 0;
-  justify-content: center;
-  z-index: 1000;
+  position: relative;
+  z-index: 1;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .paisaje-principal {
+    overflow: hidden;
+    position: relative;
+  }
+  .paisaje-principal img {
+    transition: filter 0.3s cubic-bezier(.25,.8,.25,1), transform 0.3s cubic-bezier(.25,.8,.25,1);
+    will-change: filter, transform;
+  }
+  .paisaje-principal img:hover {
+    transform: scale(1.05);
+  }
+}
+
 
 .modal-img-container {
   position: relative;
