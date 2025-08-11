@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { IconosCarousel } from '../iconos-carousel/iconos-carousel';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-gallery',
-  imports: [CommonModule],
+  imports: [CommonModule, IconosCarousel],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
   animations: [
@@ -47,6 +48,14 @@ export class Gallery implements OnInit, OnDestroy {
   currentIndex = 0;
   carouselInterval: any;
   isMobile = false;
+
+  onIconoClick(img: any) {
+    const found = this.images.find(i => i.src === img.src);
+    this.modalImg = img.src;
+    this.modalTitle = found?.title || '';
+    this.modalDesc = found?.desc || '';
+    this.modalOpen = true;
+  }
 
 
   ngOnInit() {

@@ -1,0 +1,50 @@
+.galeria-iconos {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.galeria-iconos img {
+  width: min(90vw, 350px);
+  height: auto;
+  aspect-ratio: 7/13;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  max-width: 100%;
+}
+.galeria-iconos img:hover {
+  transform: scale(1.05);
+}
+.galeria-iconos img:nth-child(2) {
+  width: 400px !important;
+  max-width: 100% !important;
+}
+@media (max-width: 900px) {
+  .galeria-iconos img {
+    width: min(95vw, 260px);
+    aspect-ratio: 7/13;
+  }
+  .galeria-iconos img:nth-child(2) {
+    width: min(95vw, 300px) !important;
+  }
+}
+@media (max-width: 600px) {
+  .galeria-iconos {
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .galeria-iconos img {
+    width: 90vw;
+    max-width: 98vw;
+    aspect-ratio: 7/13;
+    margin: 0 8px;
+  }
+  .galeria-iconos img:nth-child(2) {
+    width: 95vw !important;
+  }
+}
