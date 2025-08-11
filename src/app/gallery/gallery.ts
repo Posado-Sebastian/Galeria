@@ -38,8 +38,8 @@ export class Gallery implements OnInit, OnDestroy {
 
   onPaisajeClick(img: any) {
     this.modalImg = img.src;
-    this.modalTitle = img.alt;
-    this.modalDesc = '';
+    this.modalTitle = img.title;
+    this.modalDesc = img.desc;
     this.modalOpen = true;
   }
 
