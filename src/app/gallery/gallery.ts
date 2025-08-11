@@ -19,6 +19,24 @@ import { HttpClient } from '@angular/common/http';
       transition(':leave', [
         animate('400ms ease', style({ opacity: 0 }))
       ])
+    ]),
+    trigger('modalFade', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms ease', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('200ms ease', style({ opacity: 0 }))
+      ])
+    ]),
+    trigger('modalScale', [
+      transition(':enter', [
+        style({ transform: 'scale(0.8)', opacity: 0 }),
+        animate('300ms cubic-bezier(.25,.8,.25,1)', style({ transform: 'scale(1)', opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('200ms cubic-bezier(.25,.8,.25,1)', style({ transform: 'scale(0.8)', opacity: 0 }))
+      ])
     ])
   ]
 })

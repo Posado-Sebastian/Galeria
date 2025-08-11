@@ -4,8 +4,8 @@
         <h2 class="subtitle">Iconos</h2>
     </section>
     <iconos-carousel [images]="images" (imageClick)="onIconoClick($event)"></iconos-carousel>
-    <div class="modal-overlay" *ngIf="modalOpen" (click)="closeModal()">
-        <div class="modal-img-container modal-flex" (click)="$event.stopPropagation()">
+    <div class="modal-overlay" *ngIf="modalOpen" @modalFade (click)="closeModal()">
+        <div class="modal-img-container modal-flex" @modalScale (click)="$event.stopPropagation()">
             <img [src]="modalImg" alt="Imagen ampliada">
             <div class="modal-info">
                 <h2>{{modalTitle}}</h2>
