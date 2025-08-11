@@ -57,18 +57,24 @@
     gap: 1.5rem;
   }
   .paisajes-miniaturas-grid {
-    grid-template-columns: repeat(4, 60px);
-    grid-template-rows: repeat(2, 60px);
-    gap: 1.1rem;
+    grid-template-columns: repeat(3, minmax(60px, 1fr));
+    gap: 1.7rem;
     margin-top: 1rem;
   }
   .miniatura-cuadrada {
-    width: 60px;
-    height: 60px;
+    width: 28vw;
+    max-width: 90px;
+    aspect-ratio: 1/1;
+    height: auto;
   }
   .paisaje-principal img {
+    width: 90vw;
     max-width: 98vw;
+    aspect-ratio: 7/13;
     height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
   }
 }
 /* Modal para imagen ampliada */
@@ -142,27 +148,6 @@
   }
 }
 
-@media (max-width: 600px) {
-  .modal-img-container {
-    padding: 0.5rem 0.2rem;
-    gap: 1rem;
-  }
-  .modal-info {
-    max-width: 98vw;
-    font-size: 0.98rem;
-  }
-  .modal-img-container img {
-    max-width: 98vw;
-    max-height: 40vh;
-  }
-  .close-modal {
-    top: 2px;
-    right: 2px;
-    width: 32px;
-    height: 32px;
-    font-size: 1.5rem;
-  }
-}
 
 .close-modal {
   position: fixed;
