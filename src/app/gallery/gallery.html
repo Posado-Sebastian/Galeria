@@ -18,4 +18,14 @@
     <section class="titles" id="paisajes">
         <h2 class="subtitle">Paisajes y Actitudes</h2>
     </section>
+    <div class="paisajes-layout">
+        <div class="paisaje-principal" (click)="onPaisajeClick(paisajes[0])">
+            <img [src]="paisajes[0].src" [alt]="paisajes[0].alt">
+        </div>
+            <div class="paisajes-miniaturas-grid">
+                <div class="miniatura-cuadrada" *ngFor="let img of paisajes.slice(1,13)" (click)="onPaisajeClick(img)">
+                    <img [src]="img.src" [alt]="img.alt">
+                </div>
+            </div>
+    </div>
 </main>

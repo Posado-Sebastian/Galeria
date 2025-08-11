@@ -26,6 +26,35 @@ export class Gallery implements OnInit, OnDestroy {
   modalTitle = '';
   modalDesc = '';
 
+  paisajes = [
+    { src: 'assets/img/1.jpg', alt: 'Paisaje 1' },
+    { src: 'assets/img/2.jpg', alt: 'Paisaje 2' },
+    { src: 'assets/img/3.jpg', alt: 'Paisaje 3' },
+    { src: 'assets/img/4.jpg', alt: 'Paisaje 4' },
+    { src: 'assets/img/5.jpg', alt: 'Paisaje 5' },
+    { src: 'assets/img/6.jpg', alt: 'Paisaje 6' },
+    { src: 'assets/img/7.jpg', alt: 'Paisaje 7' },
+    { src: 'assets/img/8.jpg', alt: 'Paisaje 8' },
+    { src: 'assets/img/9.jpg', alt: 'Paisaje 9' },
+    { src: 'assets/img/10.jpg', alt: 'Paisaje 10' },
+    { src: 'assets/img/11.jpg', alt: 'Paisaje 11' },
+    { src: 'assets/img/12.jpg', alt: 'Paisaje 12' },
+    { src: 'assets/img/13.jpg', alt: 'Paisaje 13' }
+  ];
+
+  imagenActiva = 0;
+
+  cambiarImagen(index: number) {
+    this.imagenActiva = index;
+  }
+
+  onPaisajeClick(img: any) {
+    this.modalImg = img.src;
+    this.modalTitle = img.alt;
+    this.modalDesc = '';
+    this.modalOpen = true;
+  }
+
   images = [
     {
       src: 'assets/img/Spinetta b.jpg',
@@ -45,9 +74,7 @@ export class Gallery implements OnInit, OnDestroy {
   ];
 
 
-  currentIndex = 0;
-  carouselInterval: any;
-  isMobile = false;
+
 
   onIconoClick(img: any) {
     const found = this.images.find(i => i.src === img.src);
@@ -57,54 +84,8 @@ export class Gallery implements OnInit, OnDestroy {
     this.modalOpen = true;
   }
 
-
-  ngOnInit() {
-    if (typeof window !== 'undefined') {
-      this.updateIsMobile();
-      window.addEventListener('resize', this.handleResize);
-      if (this.isMobile) this.startCarousel();
-    }
-  }
-
-  ngOnDestroy() {
-    this.stopCarousel();
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('resize', this.handleResize);
-    }
-  }
-
-  handleResize = () => {
-    this.updateIsMobile();
-    if (this.isMobile) {
-      this.startCarousel();
-    } else {
-      this.stopCarousel();
-    }
-  };
-
-  updateIsMobile() {
-    this.isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
-  }
-
-
-  startCarousel() {
-    if (this.carouselInterval || !this.isMobile) return;
-    this.carouselInterval = setInterval(() => {
-      this.nextImg();
-    }, 2500);
-  }
-
-  stopCarousel() {
-    if (this.carouselInterval) {
-      clearInterval(this.carouselInterval);
-      this.carouselInterval = null;
-    }
-  }
-
-  nextImg() {
-    if (this.currentIndex < this.images.length - 1) this.currentIndex++;
-    else this.currentIndex = 0;
-  }
+  ngOnInit() {}
+  ngOnDestroy() {}
 
   openModal(img: string) {
     const found = this.images.find(i => i.src === img);
