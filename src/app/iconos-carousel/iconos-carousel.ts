@@ -9,18 +9,21 @@ import { trigger, transition, style, animate } from '@angular/animations';
   template: `
     <div class="galeria-iconos">
       <ng-container *ngIf="!isMobile; else mobileCarousel">
-        <img *ngFor="let img of images; let i = index"
-             [src]="img.src"
-             [alt]="img.title"
-             (click)="openModal(img)"
-             [ngClass]="{'middle-img': i === 1}">
+        <div class="galeria-iconos-img-container" *ngFor="let img of images; let i = index">
+          <img [src]="img.src"
+               [alt]="img.title"
+               (click)="openModal(img)"
+               [ngClass]="{'middle-img': i === 1}">
+        </div>
       </ng-container>
       <ng-template #mobileCarousel>
-        <img [src]="images[currentIndex].src"
-             [alt]="images[currentIndex].title"
-             (click)="openModal(images[currentIndex])"
-             [@fadeInOut]
-             [attr.key]="currentIndex">
+        <div class="galeria-iconos-img-container">
+          <img [src]="images[currentIndex].src"
+               [alt]="images[currentIndex].title"
+               (click)="openModal(images[currentIndex])"
+               [@fadeInOut]
+               [attr.key]="currentIndex">
+        </div>
       </ng-template>
     </div>
   `,
