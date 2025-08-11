@@ -165,9 +165,10 @@
 }
 
 .close-modal {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  position: fixed;
+  top: 96px;
+  right: 32px;
+  z-index: 2000;
   background: rgba(0,0,0,0.6);
   color: #fff;
   border: none;
@@ -236,5 +237,3 @@
   text-align: center;
   margin: 2.5rem 0;
 }
-
-/* paisajes y actitudes*/
