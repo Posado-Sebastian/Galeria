@@ -10,6 +10,11 @@
   background: linear-gradient(90deg, #ececec 0%, #f5f5f5 50%, #ececec 100%);
   animation: fadeShimmer 1.2s infinite linear;
   z-index: 2;
+  pointer-events: none;
+}
+.galeria-iconos-img-container:not(.loading) img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 @keyframes fadeShimmer {
