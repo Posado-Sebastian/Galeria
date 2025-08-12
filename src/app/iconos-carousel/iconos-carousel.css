@@ -28,7 +28,7 @@
     aspect-ratio: 7/13;
     height: auto;
     margin: 0 auto 16px auto;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@
 .galeria-iconos-img-container {
   width: min(90vw, 350px);
   aspect-ratio: 7/13;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -71,7 +71,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;
   transition: transform 0.3s ease;
   display: block;
 }

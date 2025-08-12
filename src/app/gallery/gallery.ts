@@ -1,6 +1,7 @@
 
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Location } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
 import { IconosCarousel } from '../iconos-carousel/iconos-carousel';
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -80,9 +81,14 @@ export class Gallery implements OnInit, OnDestroy {
     document.body.classList.add('modal-abierto');
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private location: Location) {}
 
   ngOnInit() {
+    setTimeout(() => {
+      if (window.location.hash === '#top') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }
+    }, 0);
     this.http.get<any[]>('assets/data/paisajes.json').subscribe(data => {
       this.paisajes = data;
       this.miniaturasLoading = Array(Math.max(0, data.length - 1)).fill(true);

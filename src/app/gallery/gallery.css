@@ -32,7 +32,7 @@
 }
 @media (max-width: 600px) {
   .section-divider {
-    max-width: 90vw !important;
+    max-width: 80vw !important;
   }
   .paisajes-miniaturas-grid {
     width: 90vw;
@@ -79,7 +79,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
 }
 .paisaje-principal img {
@@ -108,7 +108,7 @@
   height: auto;
   min-width: 60px;
   max-width: 170px;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   background: #fff;
@@ -189,7 +189,7 @@
 .modal-img-container {
   position: relative;
   background: transparent;
-  border-radius: 12px;
+  border-radius: 0;
   max-width: 90vw;
   max-height: 90vh;
   display: flex;
@@ -218,7 +218,7 @@
 .modal-img-container img {
   max-width: 80vw;
   max-height: 80vh;
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 @media (max-width: 900px) {

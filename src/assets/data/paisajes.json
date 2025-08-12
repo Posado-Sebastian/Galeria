@@ -1,8 +1,8 @@
 [
-  { "src": "assets/img/Nina c.jpg", "title": "Nina", "desc": "Descripción." },
-  { "src": "assets/img/01_Sierras en noviembre 2.jpg", "title": "Sierras en noviembre", "desc": "Descripción." },
+  { "src": "assets/img/Nina c.jpg", "title": "Nina", "desc": "Descripción de Nina." },
+  { "src": "assets/img/01_Sierras en noviembre 2.jpg", "title": "Sierras en noviembre", "desc": "Descripción de Sierras en noviembre." },
   { "src": "assets/img/02_El árbol y las sierras.jpg", "title": "El árbol y las sierras", "desc": "Descripción." },
-  { "src": "assets/img/03_Rio Tigre.jpg", "title": "Rio Tigre", "desc": "Descripción." },
+  { "src": "assets/img/03_Rio Tigre.jpg", "title": "Rio Tigre", "desc": "Descripción de Rio Tigre." },
   { "src": "assets/img/07_Diversos.jpg", "title": "Diversos", "desc": "Descripción." },
   { "src": "assets/img/09_Tarde de lluvia.jpg", "title": "Tarde de lluvia", "desc": "Descripción." },
   { "src": "assets/img/10_Paseando a Felipe.jpg", "title": "Paseando a Felipe", "desc": "Descripción." },
