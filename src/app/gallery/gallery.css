@@ -64,8 +64,6 @@
   grid-template-rows: repeat(4, 80px);
   gap: 8.1rem;
   justify-content: start;
-  margin-bottom: 0;
-  margin-top: 0;
 }
 .miniatura-cuadrada {
   width: 22vw;
@@ -204,11 +202,11 @@
     max-height: unset;
     overflow-y: visible;
     padding-bottom: 1rem;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
   }
   .modal-info::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none; 
   }
   .modal-img-container img {
     max-width: 95vw;
