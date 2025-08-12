@@ -1,15 +1,15 @@
 [
-  { "src": "assets/img/1.jpg", "title": "Paisaje 1", "desc": "Descripción del paisaje 1." },
-  { "src": "assets/img/2.jpg", "title": "Paisaje 2", "desc": "Descripción del paisaje 2." },
-  { "src": "assets/img/3.jpg", "title": "Paisaje 3", "desc": "Descripción del paisaje 3." },
-  { "src": "assets/img/4.jpg", "title": "Paisaje 4", "desc": "Descripción del paisaje 4." },
-  { "src": "assets/img/5.jpg", "title": "Paisaje 5", "desc": "Descripción del paisaje 5." },
-  { "src": "assets/img/6.jpg", "title": "Paisaje 6", "desc": "Descripción del paisaje 6." },
-  { "src": "assets/img/7.jpg", "title": "Paisaje 7", "desc": "Descripción del paisaje 7." },
-  { "src": "assets/img/8.jpg", "title": "Paisaje 8", "desc": "Descripción del paisaje 8." },
-  { "src": "assets/img/9.jpg", "title": "Paisaje 9", "desc": "Descripción del paisaje 9." },
-  { "src": "assets/img/10.jpg", "title": "Paisaje 10", "desc": "Descripción del paisaje 10." },
-  { "src": "assets/img/11.jpg", "title": "Paisaje 11", "desc": "Descripción del paisaje 11." },
-  { "src": "assets/img/12.jpg", "title": "Paisaje 12", "desc": "Descripción del paisaje 12." },
-  { "src": "assets/img/13.jpg", "title": "Paisaje 13", "desc": "Descripción del paisaje 13." }
+  { "src": "assets/img/Nina c.jpg", "title": "Nina", "desc": "Descripción." },
+  { "src": "assets/img/01_Sierras en noviembre 2.jpg", "title": "Sierras en noviembre", "desc": "Descripción." },
+  { "src": "assets/img/02_El árbol y las sierras.jpg", "title": "El árbol y las sierras", "desc": "Descripción." },
+  { "src": "assets/img/03_Rio Tigre.jpg", "title": "Rio Tigre", "desc": "Descripción." },
+  { "src": "assets/img/07_Diversos.jpg", "title": "Diversos", "desc": "Descripción." },
+  { "src": "assets/img/09_Tarde de lluvia.jpg", "title": "Tarde de lluvia", "desc": "Descripción." },
+  { "src": "assets/img/10_Paseando a Felipe.jpg", "title": "Paseando a Felipe", "desc": "Descripción." },
+  { "src": "assets/img/11_Stonington.jpg", "title": "Stonington", "desc": "Descripción." },
+  { "src": "assets/img/12_Campanario 2.jpg", "title": "Campanario", "desc": "Descripción." },
+  { "src": "assets/img/13_El último árbol.jpg", "title": "El último árbol", "desc": "Descripción." },
+  { "src": "assets/img/14_Final de otoño.jpg", "title": "Final de otoño", "desc": "Descripción." },
+  { "src": "assets/img/15_Venezia, bajo la lluvia.jpg", "title": "Venezia, bajo la lluvia", "desc": "Descripción." },
+  { "src": "assets/img/Hielo.jpg", "title": "Hielo", "desc": "Descripción." }
 ]

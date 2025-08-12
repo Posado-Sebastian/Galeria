@@ -63,6 +63,7 @@ export class Gallery implements OnInit, OnDestroy {
     this.modalTitle = img.title;
     this.modalDesc = img.desc;
     this.modalOpen = true;
+    document.body.classList.add('modal-abierto');
   }
 
   images: any[] = [];
@@ -76,6 +77,7 @@ export class Gallery implements OnInit, OnDestroy {
     this.modalTitle = found?.title || '';
     this.modalDesc = found?.desc || '';
     this.modalOpen = true;
+    document.body.classList.add('modal-abierto');
   }
 
   constructor(private http: HttpClient) {}
@@ -110,6 +112,7 @@ export class Gallery implements OnInit, OnDestroy {
     this.modalTitle = found?.title || '';
     this.modalDesc = found?.desc || '';
     this.modalOpen = true;
+    document.body.classList.add('modal-abierto');
   }
 
   closeModal() {
@@ -117,5 +120,6 @@ export class Gallery implements OnInit, OnDestroy {
     this.modalImg = '';
     this.modalTitle = '';
     this.modalDesc = '';
+    document.body.classList.remove('modal-abierto');
   }
 }
