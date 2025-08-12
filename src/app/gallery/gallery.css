@@ -1,3 +1,34 @@
+@media (max-width: 600px) {
+  .paisajes-miniaturas-grid {
+    width: 90vw;
+    max-width: 98vw;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 8px;
+    row-gap: 12vw !important;
+    margin: 0 auto 3.5rem auto !important;
+    box-sizing: border-box;
+  }
+  .miniatura-cuadrada {
+    flex: 0 1 calc((100% - 16px) / 3);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 8px;
+    row-gap: 10vw !important;
+    margin: 0 auto 2.5rem auto !important;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 600px) {
+  .miniatura-cuadrada {
+    width: 25vw !important;
+    min-width: 80px;
+    max-width: 140px;
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+}
+
 /* paisajes y actitudes */
 .paisajes-layout {
   display: flex;
@@ -37,8 +68,11 @@
   margin-top: 0;
 }
 .miniatura-cuadrada {
-  width: 170px;
-  height: 170px;
+  width: 22vw;
+  aspect-ratio: 1/1;
+  height: auto;
+  min-width: 60px;
+  max-width: 170px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
@@ -59,6 +93,7 @@
 .miniatura-cuadrada img:hover {
   transform: scale(1.05);
 }
+
 @media (max-width: 900px) {
   .modal-overlay {
     padding-top: 80px !important;
@@ -76,12 +111,6 @@
     grid-template-columns: repeat(3, minmax(60px, 1fr));
     gap: 1.7rem;
     margin-top: 1rem;
-  }
-  .miniatura-cuadrada {
-    width: 28vw;
-    max-width: 90px;
-    aspect-ratio: 1/1;
-    height: auto;
   }
   .paisaje-principal img {
     width: 90vw;
