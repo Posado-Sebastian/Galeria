@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'iconos-carousel',
@@ -9,38 +8,26 @@ import { trigger, transition, style, animate } from '@angular/animations';
   template: `
     <div class="galeria-iconos">
       <ng-container *ngIf="!isMobile; else mobileCarousel">
-        <div class="galeria-iconos-img-container" *ngFor="let img of images; let i = index">
-          <img [src]="img.src"
-               [alt]="img.title"
-               (click)="openModal(img)"
-               [ngClass]="{'middle-img': i === 1}">
+        <div class="galeria-iconos-img-container" *ngFor="let img of images">
+          <img [src]="img.src" [alt]="img.title" (click)="openModal(img)">
         </div>
       </ng-container>
       <ng-template #mobileCarousel>
         <div class="galeria-iconos-img-container">
-          <img [src]="images[currentIndex].src"
-               [alt]="images[currentIndex].title"
+          <img *ngIf="images.length" [src]="images[currentIndex]?.src"
+               [alt]="images[currentIndex]?.title"
                (click)="openModal(images[currentIndex])"
-               [@fadeInOut]
-               [attr.key]="currentIndex">
+               [style.opacity]="opacity"
+               style="transition: opacity 0.4s;">
         </div>
       </ng-template>
     </div>
   `,
-  styleUrls: ['./iconos-carousel.css'],
-  animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('600ms ease', style({ opacity: 1 }))
-      ]),
-      transition(':leave', [
-        animate('400ms ease', style({ opacity: 0 }))
-      ])
-    ])
-  ]
+  styleUrls: ['./iconos-carousel.css']
 })
 export class IconosCarousel implements OnInit, OnDestroy {
+  opacity = 1;
+  fade = true;
   @Input() images: any[] = [];
   @Output() imageClick = new EventEmitter<any>();
 
@@ -49,6 +36,7 @@ export class IconosCarousel implements OnInit, OnDestroy {
   isMobile = false;
 
   ngOnInit() {
+  this.fade = true;
     if (typeof window !== 'undefined') {
       this.updateIsMobile();
       window.addEventListener('resize', this.handleResize);
@@ -79,7 +67,11 @@ export class IconosCarousel implements OnInit, OnDestroy {
   startCarousel() {
     if (this.carouselInterval || !this.isMobile) return;
     this.carouselInterval = setInterval(() => {
-      this.nextImg();
+      this.opacity = 0;
+      setTimeout(() => {
+        this.currentIndex = (this.currentIndex + 1) % this.images.length;
+        this.opacity = 1;
+      }, 400);
     }, 2500);
   }
 
