@@ -5,24 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'iconos-carousel',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <div class="galeria-iconos">
-      <ng-container *ngIf="!isMobile; else mobileCarousel">
-        <div class="galeria-iconos-img-container" *ngFor="let img of images">
-          <img [src]="img.src" [alt]="img.title" (click)="openModal(img)">
-        </div>
-      </ng-container>
-      <ng-template #mobileCarousel>
-        <div class="galeria-iconos-img-container">
-          <img *ngIf="images.length" [src]="images[currentIndex]?.src"
-               [alt]="images[currentIndex]?.title"
-               (click)="openModal(images[currentIndex])"
-               [style.opacity]="opacity"
-               style="transition: opacity 0.4s;">
-        </div>
-      </ng-template>
-    </div>
-  `,
+  templateUrl: './iconos-carousel.html',
   styleUrls: ['./iconos-carousel.css']
 })
 export class IconosCarousel implements OnInit, OnDestroy {
