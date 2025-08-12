@@ -1,3 +1,5 @@
+
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
 import { IconosCarousel } from '../iconos-carousel/iconos-carousel';
@@ -41,6 +43,8 @@ import { HttpClient } from '@angular/common/http';
   ]
 })
 export class Gallery implements OnInit, OnDestroy {
+  principalLoading = true;
+  miniaturasLoading: boolean[] = [];
   modalOpen = false;
   modalImg = '';
   modalTitle = '';
@@ -79,10 +83,24 @@ export class Gallery implements OnInit, OnDestroy {
   ngOnInit() {
     this.http.get<any[]>('assets/data/paisajes.json').subscribe(data => {
       this.paisajes = data;
+      this.miniaturasLoading = Array(Math.max(0, data.length - 1)).fill(true);
+      this.principalLoading = true;
     });
     this.http.get<any[]>('assets/data/iconos.json').subscribe(data => {
       this.images = data;
     });
+  }
+
+  onPrincipalLoad() {
+    this.principalLoading = false;
+  }
+
+  onMiniaturaLoad(idx: number) {
+  this.miniaturasLoading[idx] = false;
+  }
+
+  isMiniaturaLoading(idx: number): boolean {
+    return this.miniaturasLoading[idx];
   }
   ngOnDestroy() {}
 
