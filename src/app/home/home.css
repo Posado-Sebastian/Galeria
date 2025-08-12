@@ -8,6 +8,9 @@
     font-size: 1.5rem !important;
     letter-spacing: 0.1rem !important;
   }
+    .section-divider {
+    max-width: 90vw !important;
+  }
 }
 .bio-section .main-title {
   display: inline-block;

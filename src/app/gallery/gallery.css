@@ -1,3 +1,4 @@
+
 .paisaje-principal.loading {
   position: relative;
   background: #ececec;
@@ -30,6 +31,9 @@
   100% { background-position: 200px 0; }
 }
 @media (max-width: 600px) {
+  .section-divider {
+    max-width: 90vw !important;
+  }
   .paisajes-miniaturas-grid {
     width: 90vw;
     max-width: 98vw;
