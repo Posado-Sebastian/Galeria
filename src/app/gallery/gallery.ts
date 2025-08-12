@@ -55,6 +55,9 @@ export class Gallery implements OnInit, OnDestroy {
 
   imagenActiva = 0;
 
+  viejoMuelle: any[] = [];
+  viejoMuelleLoading: boolean[] = [true, true, true];
+
   cambiarImagen(index: number) {
     this.imagenActiva = index;
   }
@@ -97,6 +100,16 @@ export class Gallery implements OnInit, OnDestroy {
     this.http.get<any[]>('assets/data/iconos.json').subscribe(data => {
       this.images = data;
     });
+    this.http.get<any[]>('assets/data/ViejoMuelle.json').subscribe(data => {
+      this.viejoMuelle = data;
+  this.viejoMuelleLoading = Array(Math.min(3, data.length)).fill(true);
+    });
+  }
+  onViejoMuelleLoad(idx: number) {
+    this.viejoMuelleLoading[idx] = false;
+  }
+  isViejoMuelleLoading(idx: number): boolean {
+    return this.viejoMuelleLoading[idx];
   }
 
   onPrincipalLoad() {

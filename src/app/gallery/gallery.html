@@ -37,4 +37,16 @@
                     </div>
             </div>
     </div>
+    <div class="section-divider"></div>
+    <section class="titles" id="viejo-muelle">
+        <h2 class="subtitle"> El Viejo Muelle</h2>
+    </section>
+    <div class="viejo-muelle-row" *ngIf="viejoMuelle.length >= 3">
+        <div class="viejo-muelle-img" *ngFor="let img of viejoMuelle.slice(0,3); let i = index" (click)="onPaisajeClick(img)" [class.loading]="isViejoMuelleLoading(i)">
+            <img [src]="img.src" [alt]="img.title" (load)="onViejoMuelleLoad(i)" [style.visibility]="isViejoMuelleLoading(i) ? 'hidden' : 'visible'">
+        </div>
+    </div>
+    <div class="viejo-muelle-desc">
+      Tres cuadros inspirados en la misma imagen de un viejo muelle del Tigre, Buenos Aires. Medidas: 100 x 70 cm
+    </div>
 </main>
