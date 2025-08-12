@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./iconos-carousel.css']
 })
 export class IconosCarousel implements OnInit, OnDestroy {
+  loading: boolean[] = [];
+  mobileLoading = true;
   opacity = 1;
   fade = true;
   @Input() images: any[] = [];
@@ -19,12 +21,22 @@ export class IconosCarousel implements OnInit, OnDestroy {
   isMobile = false;
 
   ngOnInit() {
-  this.fade = true;
+    this.fade = true;
+    this.loading = Array(this.images.length).fill(true);
+    this.mobileLoading = true;
     if (typeof window !== 'undefined') {
       this.updateIsMobile();
       window.addEventListener('resize', this.handleResize);
       if (this.isMobile) this.startCarousel();
     }
+  }
+
+  onImgLoad(idx: number) {
+    this.loading[idx] = false;
+  }
+
+  onMobileImgLoad() {
+    this.mobileLoading = false;
   }
 
   ngOnDestroy() {
@@ -51,9 +63,11 @@ export class IconosCarousel implements OnInit, OnDestroy {
     if (this.carouselInterval || !this.isMobile) return;
     this.carouselInterval = setInterval(() => {
       this.opacity = 0;
+      this.mobileLoading = true;
       setTimeout(() => {
         this.currentIndex = (this.currentIndex + 1) % this.images.length;
         this.opacity = 1;
+        // mobileLoading se reinicia cuando la nueva imagen carga
       }, 400);
     }, 2500);
   }

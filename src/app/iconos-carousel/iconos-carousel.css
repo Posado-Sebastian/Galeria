@@ -1,3 +1,21 @@
+.galeria-iconos-img-container.loading {
+  position: relative;
+  background: #ececec;
+  overflow: hidden;
+}
+.galeria-iconos-img-container.loading::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, #ececec 0%, #f5f5f5 50%, #ececec 100%);
+  animation: fadeShimmer 1.2s infinite linear;
+  z-index: 2;
+}
+
+@keyframes fadeShimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
 @media (max-width: 900px) {
   .galeria-iconos-img-container {
     width: 90vw !important;
