@@ -1,4 +1,17 @@
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+  .galeria-iconos-img-container {
+    width: 90vw !important;
+    max-width: 98vw !important;
+    aspect-ratio: 7/13;
+    height: auto;
+    margin: 0 auto 16px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
   .galeria-iconos-img-container img.fade {
     animation: fadeIn 1s;
   }
